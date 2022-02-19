@@ -8,6 +8,18 @@ use SilverStripe\CMS\Model\SiteTree;
 use SilverStripe\Control\Director;
 use SilverStripe\Forms\FieldList;
 
+use SilverStripe\Forms\TextField;
+use SilverStripe\Forms\TextareaField;
+use SilverStripe\Forms\Tab;
+use SilverStripe\Forms\FieldGroup;
+use SilverStripe\Forms\TabSet;
+use SilverStripe\Forms\ReadOnlyField;
+use SilverStripe\Forms\GridField\GridField;
+use SilverStripe\Forms\GridField\GridFieldConfig_RelationEditor;
+use SilverStripe\AssetAdmin\Forms\UploadField;
+use SilverStripe\Assets\Image;
+use SilverStripe\Assets\File;
+
 /**
  * Class Sponsor
  * @package Dynamic\Elements\Sponsors\Model
@@ -39,8 +51,8 @@ class Sponsor extends BaseElementObject
     ];
 
     private static $has_one = array(
-        'LogoImage' => Image::class,
-        'LogoFile' => File::class,
+        'LogoImage' => \SilverStripe\Assets\Image::class,
+        'LogoFile' => \SilverStripe\Assets\File::class,
     );
 
     /**
@@ -71,7 +83,7 @@ class Sponsor extends BaseElementObject
     {
         $result = parent::validate();
 
-        if (!$this->ImageID) {
+        if (!$this->LogoImage && !$this->LogoFile) {
             $result->addError('A logo is required before you can save');
         }
 
