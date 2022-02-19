@@ -1,8 +1,8 @@
 <?php
 
-namespace Dynamic\Elements\Sponsors\Admin;
+namespace bigreja\Elements\Sponsors\Admin;
 
-use Dynamic\Elements\Sponsors\Model\Sponsor;
+use bigreja\Elements\Sponsors\Model\Sponsor;
 use SilverStripe\Admin\ModelAdmin;
 
 /**
