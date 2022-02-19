@@ -1,7 +1,7 @@
 {
-  "name": "dynamic/silverstripe-elemental-sponsors",
+  "name": "bigreja/silverstripe-elemental-sponsors",
   "type": "silverstripe-vendormodule",
-  "description": "Display a list of sponsor logos with links.",
+  "description": "Display a list of sponsor logos with links, #bigreja# add support for svg logo",
   "keywords": [
     "silverstripe",
     "sponsors",
@@ -13,6 +13,11 @@
       "name": "Dynamic",
       "email": "dev@dynamicagency.com",
       "homepage": "http://www.dynamicagency.com"
+    },
+    {
+      "name": "Bruno Igreja",
+      "email": "bigreja+github@gmail.com",
+      "homepage": "http://www.superbraga.com"
     }
   ],
   "require": {
@@ -35,8 +40,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Dynamic\\Elements\\Sponsors\\": "src/",
-      "Dynamic\\Elements\\Sponsors\\Test\\": "tests/"
+      "bigreja\\Elements\\Sponsors\\": "src/",
+      "bigreja\\Elements\\Sponsors\\Test\\": "tests/"
     }
   },
   "minimum-stability": "dev",
